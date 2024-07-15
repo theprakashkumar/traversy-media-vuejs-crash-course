@@ -1,3 +1,8 @@
+<script setup>
+import { RouterLink } from "vue-router";
+import { isActiveLink } from "@/utils/links";
+</script>
+
 <template>
   <nav class="bg-green-700 border-b border-green-500">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -14,20 +19,28 @@
           </a>
           <div class="md:ml-auto">
             <div class="flex space-x-2">
-              <a
-                href="index.html"
-                class="text-white bg-green-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Home</a
+              <RouterLink
+                to="/"
+                :class="`text-white ${
+                  isActiveLink('/')
+                    ? 'bg-green-900'
+                    : 'hover:bg-gray-900 hover:text-white'
+                } rounded-md px-3 py-2`"
+                >Home</RouterLink
               >
-              <a
-                href="jobs.html"
-                class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
-                >Jobs</a
+              <RouterLink
+                to="/jobs"
+                :class="`text-white ${
+                  isActiveLink('/jobs')
+                    ? 'bg-green-900'
+                    : 'hover:bg-gray-900 hover:text-white'
+                } rounded-md px-3 py-2`"
+                >Jobs</RouterLink
               >
-              <a
-                href="add-job.html"
+              <RouterLink
+                to="/addJob"
                 class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
-                >Add Job</a
+                >Add Job</RouterLink
               >
             </div>
           </div>

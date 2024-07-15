@@ -25,6 +25,7 @@ defineProps({
         >
           <!-- Iterate over jobs array -->
           <JobsCard
+            :id="job.id"
             :type="job.type"
             :title="job.title"
             :description="job.description"
