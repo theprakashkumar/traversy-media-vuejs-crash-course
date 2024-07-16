@@ -1,14 +1,12 @@
 <script setup>
-import jobData from "@/jobs.json";
 import JobsCard from "@/components/JobsCard.vue";
-import { ref } from "vue";
 
-const jobs = ref(jobData);
 defineProps({
   showButton: {
     type: Boolean,
     default: false,
   },
+  jobs: Array,
 });
 </script>
 <template>
