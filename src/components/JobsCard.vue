@@ -49,7 +49,6 @@ const calculatedDescription = computed(() => {
 <template>
   <RouterLink :to="`jobs/${id}`">
     <div class="p-4">
-      <p>{{ showFullDescription }}</p>
       <div class="mb-6">
         <div class="text-gray-600 my-2">{{ type }}</div>
         <h3 class="text-xl font-bold">{{ title }}</h3>

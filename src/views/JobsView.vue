@@ -17,7 +17,6 @@ onMounted(async () => {
     });
 
     jobState.jobs = fetchedJobs.data;
-
     jobState.isLoading = false;
   } catch (error) {
     console.log(error);
