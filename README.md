@@ -12,17 +12,25 @@
   });
   ```
 
-* When to use .value when to not. For now I think when we need to access the refs in script tag then we have to use `.value` but in template we don't have to use `.value`. Also one time I was trying to access props defined by `defineProps` in the script tag just by key but it was not working so I created a variable with name `props` and equate it with `defaultProps` and I was able to access props using `props.propName`.
+- When to use .value when to not. For now I think when we need to access the refs in script tag then we have to use `.value` but in template we don't have to use `.value`. Also one time I was trying to access props defined by `defineProps` in the script tag just by key but it was not working so I created a variable with name `props` and equate it with `defaultProps` and I was able to access props using `props.propName`.
 
-* Computed methods run when some dependency changes something like when dependency changes in the `useEffect` the callback function runs.
-* Use `:` when need to pass number or boolean as props if we don't use then all the props will be consider as string.
-* Defines state with `ref`.
+- Computed methods run when some dependency changes something like when dependency changes in the `useEffect` the callback function runs.
+- Use `:` when need to pass number or boolean as props if we don't use then all the props will be consider as string.
+- Defines state with `ref`.
 
-* We use `<slot>` to have functionality of like we have `{children}` in React.
+- We use `<slot>` to have functionality of like we have `{children}` in React.
 
-* ADD ROUTING THINGS
+- ADD ROUTING THINGS
 
-* HOW TO KNOW WHAT ARE THE DEPENDENCIES OF computed METHOD
+- We can pass the dependency array in the compute method:
+
+```javascript
+compute([dependency1, dependency2], callbackFunction, { immediate: true });
+```
+
+`compute` won't be called when the computed mounded as useEffect run when the component mount so to get the similar functionality we can pass and object with `{ immediate: true }` on we can use `useMounted`.
+
+- Composable are equivalent to hooks.
 
 # package.json
 
